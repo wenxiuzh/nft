@@ -124,7 +124,7 @@ export default {
     },
     save(){
       this.axios({
-          method: 'post',
+          method: 'put',
           url: '/user/SetUserInfo',
           data: {
             nickName: this.nickname,

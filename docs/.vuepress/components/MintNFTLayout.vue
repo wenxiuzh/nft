@@ -127,7 +127,10 @@ export default {
       })
       .then(json => {
         if(json.data.msg == '操作成功'){
-          this.$vs.notify({color:'success',title:'购买完成','position':'top-center'})
+          this.$vs.notify({color:'success',title:'购买完成,请稍后在“我的”-“已购作品”或链上钱包中查看。','position':'top-center'})
+        }else {
+          this.$vs.notify({color:'danger',title:'购买失败','position':'top-center'})
+
         }
       })
     }
