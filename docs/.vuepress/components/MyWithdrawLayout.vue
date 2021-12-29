@@ -204,7 +204,7 @@ export default {
     getMyWithdraw(){
       this.axios({
           method: 'get',
-          url: '/userBilling/getUserBillingList?page=1&pageSize=10',
+          url: '/api/userBilling/getUserBillingList?page=1&pageSize=10',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
         }

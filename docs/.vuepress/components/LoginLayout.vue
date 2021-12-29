@@ -79,6 +79,7 @@ export default {
             this.$cookies.set('x-avatar',json.data.data.user.headerImg)
             this.$cookies.set('x-nickname',json.data.data.user.nickName)
             this.$cookies.set('x-username',json.data.data.user.userName)
+            this.$cookies.set('x-chain-id',json.data.data.user.chainId)
             this.$router.push('/')
           } else {
             this.$vs.notify({color:'success',title:'登录失败','position':'top-center'})

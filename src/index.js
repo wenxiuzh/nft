@@ -33,7 +33,7 @@ const install = (Vue, options={}) => {
           // }
           config.data = JSON.stringify(config.data)
           config.headers = {
-              'Content-Type': 'application/json',
+              'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
               'x-token': VueCookies.get("x-token"),
               'x-user-id': VueCookies.get("x-user-id")
           }

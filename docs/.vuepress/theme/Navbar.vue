@@ -114,6 +114,8 @@ export default {
           this.$cookies.remove('x-token')
           this.$cookies.remove('x-avatar')
           this.$cookies.remove('x-nickname')
+          this.$cookies.remove('x-username')
+          this.$cookies.remove('x-chain-id')
           this.$router.push('/')
         })
     }

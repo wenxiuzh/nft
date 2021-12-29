@@ -85,19 +85,13 @@ export default {
     Sidebar
   },
   data:()=>({
-    total: 1,
-    currentPage: 1,
+    id: 1,
     asset:{},
   }),
-  watch: {
-    currentPage(now, before){
-      /* 动态加载分页 */
-      this.getPreviewAssets(this.currentPage)
-    }
-  },
   computed: {
   },
   mounted(){
+    this.id = this.$route.query.a
     this.getOrder(this.$route.query.a)
   },
   methods:{
@@ -116,26 +110,26 @@ export default {
         })
     },
     finishPayment(){
-      if(this.$cookies.get('x-chain-id') == ''){
+      if(this.$cookies.get('x-chain-id') == null || this.$cookies.get('x-chain-id') == ''){
         this.$vs.notify({color:'danger',title:'钱包地址未设置，请先设置','position':'top-center'})
         this.$route.push('/my/info/')
       }
       this.axios({
         method: 'post',
         url: '/api/MktProd/buy',
-        data:{
-          id: this.id,
-          targetChainID: this.$cookies.get('x-chain-id')
+        data: {
+          'id': this.id,
+          'targetChainID': this.$cookies.get('x-chain-id')
         },
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
         }
       })
       .then(json => {
-          if(json.data.msg == '操作成功'){
-            this.$vs.notify({color:'success',title:'购买完成','position':'top-center'})
-          }
-        })
+        if(json.data.msg == '操作成功'){
+          this.$vs.notify({color:'success',title:'购买完成','position':'top-center'})
+        }
+      })
     }
   }
 }

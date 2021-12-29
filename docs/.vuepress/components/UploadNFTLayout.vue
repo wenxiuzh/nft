@@ -17,8 +17,8 @@
           <div class="centerx labelx" style="justify-content:flex-start;">
             <vs-input label="作品名称" placeholder="输入作品名称" style="margin-top:10px;width:25rem;" v-model="PorductName"/>
             <vs-input label="标价" placeholder="￥0.00" style="margin-top:10px;width:25rem;" v-model="ProductPrice"/>
-            <vs-textarea label="作品描述" height="200px" style="margin-top:10px;width:25rem;"/>
-            <vs-input label="发行量" placeholder="￥0.00" style="margin-top:10px;width:25rem;"  v-model="ProductNum"/>
+            <vs-textarea label="作品描述" height="200px" style="margin-top:10px;width:25rem;" v-model="ProductNum"/>
+            <vs-input label="发行量" placeholder="￥0.00" style="margin-top:10px;width:25rem;"  v-model="ProductDesc"/>
             <vs-select
               class="selectExample"
               label="分类"
@@ -82,6 +82,7 @@ export default {
     JoinMarket: 0,
     JoinBlindbox: 0,
     uploadTime: '',
+    ProductDesc: '',
     CategoryOptions:[
       {value:2,text:'艺术'},
       {value:3,text:'音乐'},
@@ -123,6 +124,7 @@ export default {
             joinPreview: this.joinPreview,
             joinMarket: this.joinMarket,
             previewTime: this.PreviewTime,
+            ProductDesc: this.ProductDesc,
             joinBlindbox: 1,
             ownerId: this.$cookies.get('x-user-id'),
             ownerName: this.$cookies.get('x-username'),
