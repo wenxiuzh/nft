@@ -11,7 +11,7 @@
       支持的文件类型: JPG, PNG, GIF, SVG, MP4, WEBM, MP3, WAV, OGG, GLB, GLTF. 文件大小: 100 MB
         </vs-col>
         <vs-col  vs-offset="4" vs-type="flex" vs-justify="center"  vs-align="center" vs-w="4">
-          <vs-upload class="update-asset" fileName="file" action="http://localhost:8888/pub/fileUploadAndDownload/upload" @on-success="successUpload" show-upload-button />
+          <vs-upload class="update-asset" fileName="file" action="http://101.43.145.27:8888/pub/fileUploadAndDownload/upload" @on-success="successUpload" show-upload-button />
         </vs-col>
         <vs-col  vs-offset="4" vs-type="flex" vs-justify="flex-start" vs-align="flex-start" vs-w="4">
           <div class="centerx labelx" style="justify-content:flex-start;">

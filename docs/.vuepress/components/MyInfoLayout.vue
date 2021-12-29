@@ -28,7 +28,7 @@
         </vs-col>
         <vs-col vs-offset="1" vs-type="flex" vs-justify="left" vs-align="left" vs-w="9">
             <vs-avatar size="70px" :src="$withBase(avatar)"/>
-            <vs-upload class="update-asset" fileName="file" action="http://localhost:8888/pub/fileUploadAndDownload/upload" @on-success="successUpload" show-upload-button />
+            <vs-upload class="update-asset" fileName="file" action="http://101.43.145.27:8888/pub/fileUploadAndDownload/upload" @on-success="successUpload" show-upload-button />
         </vs-col>
         </vs-row>
         <vs-row class="info-row">

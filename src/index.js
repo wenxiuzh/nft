@@ -23,7 +23,7 @@ const install = (Vue, options={}) => {
   Vue.use(VueCookies)
   // 创建 axios 实例
   const service = axios.create({
-      baseURL: 'http://localhost:8080/', 
+      baseURL: 'http://101.43.145.27:8080/', 
       timeout: 600000 // 请求超时时间
   })
   service.interceptors.request.use(
