@@ -32,11 +32,10 @@
               </vs-col>
             </vs-row>
             <div class="recommand-desc-bottom">
-              <vs-button @click="popupActivo=true" class="recommand-desc-button"  color="danger" type="gradient" style="width:100%;height:3rem;position:relative;bottom:0px;" to="/asset/">立即购买</vs-button>
-              <vs-popup class="holamundo"  title="选择支付方式" :active.sync="popupActivo">
+              <vs-button @click="popupActivo=true" class="recommand-desc-button"  color="danger" type="border" style="width:100%;height:3rem;position:relative;bottom:0px;" >即将开售</vs-button>
+              <vs-popup class="holamundo"  title="即将开售" :active.sync="popupActivo">
                 <p>
-                  <a>微信支付</a>
-                  <a>支付宝支付</a>
+                  开售时间:{{asset.previewTime}}
                 </p>
               </vs-popup>
             </div>

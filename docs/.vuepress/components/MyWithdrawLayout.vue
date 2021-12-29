@@ -166,7 +166,7 @@ export default {
       .then(json => {
         // var json = api
           // productDescomentar cuando sea real la solicitud
-          if(json.data.msg == '获取成功'){
+          if(json.data.data.msg == '获取成功'){
             this.ammount = json.data.data.userInfo.ammount;
           } else {
             this.$vs.notify({color:'success',title:'获取失败','position':'top-center'})
